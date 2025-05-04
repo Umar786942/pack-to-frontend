@@ -3,11 +3,13 @@ import { ReactNode } from "react";
 
 type Propstype = {
   children: ReactNode;
+  onclick?: () => void;
 };
 
-const CustomButton = ({ children }: Propstype) => {
+const CustomButton = ({ children, onclick }: Propstype) => {
   return (
     <button
+    onClick={onclick}
       style={{
         padding: "10px 20px",
         backgroundColor: "#007BFF",
